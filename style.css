@@ -1,0 +1,139 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.tarjeta{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    text-align:center;
+    color:rgb(41, 30, 30);
+    max-width:500px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    background:white;
+    color:#ff4b6e;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+/* corazones */
+
+.corazon{
+    position:fixed;
+    top: -20px;
+    color:white;
+    pointer-events: none;
+    animation: lluvia linear forwards;
+    font-size:20px;
+}
+
+@keyframes lluvia{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(100vh);
+        opacity:0.7;
+    }
+}
+
+/* CARTA */
+
+.carta{
+    max-height:0;
+    overflow:hidden;
+    transition: all 0.6s ease;
+    opacity:0;
+    margin-top:15px;
+}
+
+.carta.abierta{
+    max-height:300px;
+    opacity:1;
+}
+
+.carta-contenido{
+    background:white;
+    color:#ff4b6e;
+    padding:15px;
+    border-radius:12px;
+    animation: aparecer 0.6s ease;
+}
+
+@keyframes aparecer{
+    from{
+        transform: translateY(20px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+
+/* BOTONES DEL JUEGO */
+
+.juego{
+    margin-top:20px;
+}
+
+.juego button{
+    margin:10px;
+    padding:12px 20px;
+    font-size:16px;
+    border-radius:20px;
+    border:none;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.si{
+    background:#ff4b6e;
+    color:white;
+}
+
+.no{
+    background:#ccc;
+}
+
+/* CONFETTI */
+
+.confetti{
+    position: fixed;
+    width:8px;
+    height:14px;
+    top:-10px;
+    opacity:0.9;
+    animation: caerConfetti linear forwards;
+}
+
+@keyframes caerConfetti{
+    from{
+        transform: translateY(0) rotate(0deg);
+    }
+    to{
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
