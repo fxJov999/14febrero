@@ -86,7 +86,15 @@ button:hover{
 
 .juego{
     margin-top:20px;
+
+    position:relative;     /* 🔥 IMPORTANTE */
+    overflow:hidden;       /* evita que salga de la tarjeta */
+    padding:20px;
+    border-radius:16px;
+
+    background: rgba(255,255,255,0.5);
 }
+
 
 .si{
     background:#ff4b6e !important;
