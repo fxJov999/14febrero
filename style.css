@@ -100,26 +100,55 @@ button:hover{
 
 /* ================= CHAT ================= */
 
+.layout{
+    display:grid;
+    grid-template-columns: minmax(340px,520px) 320px;
+    gap:24px;
+    align-items:center;
+}
+
+@media (max-width: 900px){
+    .layout{
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .chat{
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,0.85);
     backdrop-filter: blur(8px);
     border-radius:16px;
     padding:15px;
+
     display:flex;
     flex-direction:column;
-    height:350px;
+
+    height:260px;
+    max-width:300px;
+    width:100%;
+
+    margin-top: 100px;
+    margin-left:auto;
+    margin-right:auto;   /* 🔥 centra dentro de su columna */
 }
+
+
+
 
 .chat-mensajes{
     flex:1;
     overflow-y:auto;
+    padding-right:4px;
 }
+
 
 .msg{
     margin:6px 0;
     padding:8px 12px;
     border-radius:14px;
     width:fit-content;
+    font-size: 14px;
+    line-height: 1.3;
 }
 
 .tu{
@@ -177,3 +206,8 @@ input:focus{
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
+
+.regalo{
+    margin-top:90px;   /* súbelo si quieres más abajo */
+}
+

@@ -5,7 +5,7 @@
 const appSanValentin = document.getElementById("app-valentin");
 
 const contenedor = document.createElement("div");
-contenedor.className = "container py-5";
+contenedor.className = "container py-5 layout";
 appSanValentin.appendChild(contenedor);
 
 // GRID Bootstrap
